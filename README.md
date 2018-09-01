@@ -1,6 +1,6 @@
-#Smart City Hackathon
+# Smart City Hackathon
 
-##Datum helper with example
+## Datum helper with example
 
 Please use the datumHelper.js to help you get sense of how to generate, recover, and transfer DAT to your accounts.
 
@@ -8,12 +8,12 @@ Please note the following:
 1. _All balances are returned in Wei not DAT._
 2. _You can't perform concurrent set/remove, this is related to Blockchain not Datum since you have to manage transaction nonce._
 
-###How to get help
+### How to get help
 1. ask all your questions @ our [gitter_lobby](https://gitter.im/Datum/Lobby)
 2. check out our official example folder our [SDK repo](https://github.com/Datum/datum-sdk)
 3. [Check our getting Started](https://gettingstarted.datum.org/)
 
-###Create New Datum Object
+### Create New Datum Object
 To Create Datum Identity you need to perform two steps:
 
 1.  Create new datum Object
@@ -33,7 +33,7 @@ tmpDatObj.initialize({ identity: id.keystore });
 _Note that keystore must be stringified._
 
 
-####Full example
+#### Full example
 ```javascript
 async function createDatumIdentity(password, accounts = 0) {
   const tmpDatObj = new Datum();
@@ -46,7 +46,7 @@ async function createDatumIdentity(password, accounts = 0) {
 }
 ```
 _storePassword function allow you to perform operations without providing password every time_
-###Recover Datum Object From SEED
+### Recover Datum Object From SEED
 To recover datum object from seed keyword
 
 
@@ -74,7 +74,7 @@ tmpDatum.initialize({
 ```
 _Notice that keystore is stringified_
 
-####Full example
+#### Full example
 ```javascript
 async function recoverDatumObj(seed, password) {
   const tmpId = new Datum().Identity();
